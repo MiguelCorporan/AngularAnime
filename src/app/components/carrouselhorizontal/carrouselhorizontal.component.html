@@ -1,0 +1,29 @@
+<div *ngIf="view; else myTemplate">
+    <app-loader></app-loader>
+</div>
+
+<ng-template #myTemplate>
+    
+<div class="card">
+    <p-carousel [value]="products" [numVisible]="5" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="i product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <img src="{{ product.image }}" [alt]="product.name" class="product-image" />
+                    </div>
+                    <div>
+                        <h4 class="lett mb-1">{{ product.name }}</h4>
+                       
+                       
+                        <div class="car-buttons mt-5">
+                            <p-button (onClick)="BuscaUno(product.id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
+                            <p-button (onClick)="GuardaItem(product)" type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+</ng-template>

@@ -1,0 +1,49 @@
+.ContenidoAbajo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.seccion2{
+    display: flex;
+}
+
+.med{
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    text-align: center;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 460px) {
+
+    .ContenidoAbajo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .seccion2{
+        flex-direction: column;
+    }
+
+    .med2{
+        width: 100%;
+        display: flex;
+        overflow-y: auto;
+    }
+
+    .todo{
+        width: 100%;
+        
+        margin-top: 1rem;
+    }
+ 
+}

@@ -1,0 +1,23 @@
+<div class="medio" *ngIf="view; else myTemplate">
+    <div>
+        <h3>Aun no tienes animes favoritos, agrega algunos</h3>
+            <button routerLink="/">Ver animes</button>
+    </div>
+</div>
+
+<ng-template #myTemplate>
+    <article>
+        <div *ngFor="let item of AllAnimes" class="tarj">
+            <img src={{item.image}} alt="">
+            <h3>{{item.name}}</h3>
+            <div>
+                <p-button (onClick)="BuscaUno(item.id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
+                <p-button (onClick)="remove(item)" type="button" styleClass="p-button-danger p-button-rounded mr-2" icon="pi pi-trash"></p-button>
+            </div>
+        </div>
+    </article>
+    <div class="med">
+        <button (click)="allRemove()" *ngIf="AllAnimes.length > 1">Elimnar todos</button>
+    </div>
+
+</ng-template>

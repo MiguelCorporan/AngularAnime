@@ -1,0 +1,94 @@
+.medio{
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.medio div{
+    padding: 2rem 1rem;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 18px;
+    margin-top: 5rem;
+}
+
+.medio button{
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #3B82F6;
+    border: none;
+    font-weight: bold;
+}
+
+.medio button:hover{
+    cursor: pointer;
+    background-color: rgb(147, 147, 147);
+}
+
+article{
+    margin-top: 1rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 16px;
+
+    place-items: center;
+}
+
+.tarj{
+    width: 14rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px solid #fff;
+}
+
+.tarj img{
+    width: 12rem;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.se{
+    margin-right: 10px;
+}
+
+h3{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.med{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+button{
+    background-color: #f63b3b;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: .5rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+    article{
+        place-items: center;
+    }
+    
+}

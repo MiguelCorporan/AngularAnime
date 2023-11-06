@@ -1,0 +1,28 @@
+<div *ngIf="view; else myTemplate">
+    <app-loader></app-loader>
+</div>
+
+<ng-template #myTemplate>
+    <h3 class="medio">Animes en el top</h3>
+<div class="card flex justify-content-center">
+    <p-carousel [value]="products" [numVisible]="1" [numScroll]="1" orientation="vertical" verticalViewPortHeight="360px" [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <img src="{{ product.image }}"[alt]="product.name" class="product-image" />
+                    </div>
+                    <div class="Centrado">
+                        <h4 class="mb-1">{{product.name}}</h4>
+
+                        <div class="car-buttons mt-5">
+                            <p-button (onClick)="BuscaUno(product.mal_id)" class="lef" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
+                            <p-button (onClick)="GuardaItem(product)" type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>
+</ng-template>

@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    gap: .5rem;
+}
+
+.glass{
+    width: 12rem;
+    height: 18rem;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.glass img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+
+    transition:0.4s ease-in-out;
+}
+
+.over{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background-color: black;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+.conten{
+    position: absolute;
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+    
+    
+}
+
+.glass:hover .over{
+    opacity: 0.6;
+}
+.glass:hover img{
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+    .container{
+        margin-bottom: 1rem;
+    }
+}
