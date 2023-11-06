@@ -8,8 +8,8 @@
             <img src={{item.images.jpg.image_url}} alt="">
             <h3>{{item.title}}</h3>
             <div>
-                <p-button (onClick)="BuscaUno(item.mal_id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
-                <p-button (onClick)="GuardaItem(item)" type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                <p-button (click)="BuscaUno(item.mal_id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
+                <p-button (click)="GuardaItem(item)" type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
             </div>
         </div>
     </article>

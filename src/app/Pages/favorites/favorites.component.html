@@ -11,8 +11,8 @@
             <img src={{item.image}} alt="">
             <h3>{{item.name}}</h3>
             <div>
-                <p-button (onClick)="BuscaUno(item.id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
-                <p-button (onClick)="remove(item)" type="button" styleClass="p-button-danger p-button-rounded mr-2" icon="pi pi-trash"></p-button>
+                <p-button (click)="BuscaUno(item.id)" class="se" type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-eye"></p-button>
+                <p-button (click)="remove(item)" type="button" styleClass="p-button-danger p-button-rounded mr-2" icon="pi pi-trash"></p-button>
             </div>
         </div>
     </article>
