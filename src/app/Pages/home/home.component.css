@@ -20,7 +20,7 @@
 }
 
 
-@media screen and (min-width: 360px) and (max-width: 460px) {
+@media screen and (min-width: 360px) and (max-width: 1060px) {
 
     .ContenidoAbajo{
         width: 100%;
@@ -38,6 +38,7 @@
         width: 100%;
         display: flex;
         overflow-y: auto;
+        justify-content: center;
     }
 
     .todo{

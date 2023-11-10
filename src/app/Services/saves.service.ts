@@ -16,8 +16,8 @@ export class SavesService {
    }
 
 
-  public FavItem: any = []
-  FavItemList = new BehaviorSubject<any>([])
+  public FavItem: Product[] = []
+  FavItemList = new BehaviorSubject<Product[]>([])
   
   check = new BehaviorSubject<boolean>(false)
   check2 = new BehaviorSubject<boolean>(false)
@@ -45,7 +45,7 @@ export class SavesService {
   }
 
   removeItem(item: Product) {
-    this.FavItem.map((a: Product, index: Product) => {
+    this.FavItem.map((a: Product, index: number) => {
       if (item.id === a.id) {
         this.FavItem.splice(index, 1)
       }
@@ -56,8 +56,11 @@ export class SavesService {
   }
 
   removeAll(){
+    console.log('pa');
+    
     this.FavItem = []
     this.FavItemList.next(this.FavItem)
+    localStorage.setItem('fav', JSON.stringify(this.FavItem));
   }
 
   FavRe(){
