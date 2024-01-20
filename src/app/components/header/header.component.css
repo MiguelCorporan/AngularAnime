@@ -1,0 +1,9 @@
+::ng-deep .p-menubar {
+    background-color: rgb(34, 34, 34);
+    /* tus estilos personalizados aquí */
+}
+
+::ng-deep .p-menubar span {
+    color: rgb(184, 184, 184);
+    /* tus estilos personalizados aquí */
+}

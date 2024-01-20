@@ -38,10 +38,6 @@ export class HeaderComponent implements OnInit {
             this.navigate('/favoritos');  
         }
       },
-      {
-          label: 'Users',
-          icon: 'pi pi-fw pi-user',
-      },
       // {
       //     label: 'Quit',
       //     icon: 'pi pi-fw pi-power-off'
